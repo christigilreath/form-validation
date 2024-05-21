@@ -3,30 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <div class="container">
       <form action="/">
+        <h1>Registration</h1>
         <div>
           <label for="email">Enter Email</label>
-          <input id="email" name="email" type="email" />
+          <input id="email" name="email" type="email" required />
+          <span></span>
         </div>
         <div>
           <label for="country">Enter Country</label>
           <input type="text" id="country" name="country" />
+          <span></span>
         </div>
         <div>
           <label for="zip">Enter Zip Code</label>
-          <input id="zip" name="zip" type="number" />
+          <input id="zip" name="zip" type="text" min="5" max="10" required />
+          <span></span>
         </div>
         <div>
           <label for="password">Enter Password</label>
-          <input type="password" id="password" name="password" />
+          <input type="password" id="password" name="password" required />
+          <span></span>
         </div>
         <div>
           <label for="password2">Re-EnterPassword</label>
-          <input type="password" id="password2" name="password2" />
+          <input type="password" id="password2" name="password2" required />
+          <span></span>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
